@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    color: white;
+    background-color: #ffe6f2;
+}
+
+header {
+    background-color: #ff99cc;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 20px 0 10px;
+    font-size: 2.5em;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+.book-form {
+    background-color: rgba(255, 105, 180, 0.5);
+    padding: 50px; /* Increased padding */
+    border-radius: 10px;
+    display: inline-block;
+    text-align: left;
+    max-width: 700px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased margin between form groups */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.form-group input,
+.form-group textarea {
+    width: calc(100% - 20px); /* Adjusted width to accommodate padding */
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1em;
+    background-color: #fff;
+    color: #ff69b4;
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+
+.form-group button {
+    background-color: rgba(255, 105, 180, 0.8);
+    padding: 12px 24px; /* Increased padding */
+    color: #8b008b;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    font-family: 'Indie Flower', cursive;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: rgba(255, 105, 180, 1);
+    color: white;
+}
