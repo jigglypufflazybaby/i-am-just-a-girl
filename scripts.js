@@ -25,3 +25,46 @@ document.addEventListener('DOMContentLoaded', function() {
         glitters.forEach(glitter => glitter.remove());
     }
 });
+
+// Function to save book data
+function saveBook(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get form values
+    const bookName = document.getElementById('book-name').value;
+    const authorName = document.getElementById('author-name').value;
+    const description = document.getElementById('description').value;
+    const startDate = document.getElementById('start-date').value;
+    const endDate = document.getElementById('end-date').value;
+
+    // Create book object
+    const book = {
+        name: bookName,
+        author: authorName,
+        description: description,
+        startDate: startDate,
+        endDate: endDate
+    };
+
+    // Get existing books from local storage or initialize empty array
+    let books = JSON.parse(localStorage.getItem('books')) || [];
+
+    // Check if book with the same name already exists (for update scenario)
+    const existingBookIndex = books.findIndex(b => b.name === bookName);
+    if (existingBookIndex !== -1) {
+        // Update existing book entry
+        books[existingBookIndex] = book;
+    } else {
+        // Add new book entry
+        books.push(book);
+    }
+
+    // Save updated books array back to local storage
+    localStorage.setItem('books', JSON.stringify(books));
+
+    // Optionally, clear the form after submission
+    document.querySelector('.book-form').reset();
+
+    // Optionally, display or update a list of books (not shown here)
+}
+
