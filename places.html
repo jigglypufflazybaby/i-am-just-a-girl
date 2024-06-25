@@ -3,22 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Places Visited</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Places - My Digital Slambook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="places.css">
 </head>
 <body>
-    <h1>Places Visited</h1>
-    <form action="add_entry.php" method="post">
-        <input type="hidden" name="category" value="places">
-        <label for="name">Place Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="description">Description:</label>
-        <textarea id="description" name="description" required></textarea>
-        <button type="submit">Add Place</button>
-    </form>
-    <div id="places-list">
-        <!-- This will be populated with entries from the database -->
-    </div>
+    <header>
+        <div class="back-button">
+            <a href="ri.html">← Back</a>
+        </div>
+        <h1>𐙚˙⋆.˚  SLAMBOOK - PLACES  𐙚˙⋆.˚ </h1>
+    </header>
+    <main>
+        <form class="place-form">
+            <div class="form-group">
+                <label for="place-name">Place Name:</label>
+                <input type="text" id="place-name" name="place-name" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="visit-date">Visit Date:</label>
+                <input type="date" id="visit-date" name="visit-date" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" name="rating" min="1" max="10" step="0.1" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </main>
     <script src="scripts.js"></script>
 </body>
 </html>
