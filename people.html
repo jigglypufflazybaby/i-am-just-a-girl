@@ -3,22 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>People</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>People - My Digital Slambook</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="people.css">
 </head>
 <body>
-    <h1>People</h1>
-    <form action="add_entry.php" method="post">
-        <input type="hidden" name="category" value="people">
-        <label for="name">Person's Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="description">Description:</label>
-        <textarea id="description" name="description" required></textarea>
-        <button type="submit">Add Person</button>
-    </form>
-    <div id="people-list">
-        <!-- This will be populated with entries from the database -->
-    </div>
+    <header>
+        <div class="back-button">
+            <a href="ri.html">← Back</a>
+        </div>
+        <h1>𐙚˙⋆.˚  SLAMBOOK - PEOPLE  𐙚˙⋆.˚ </h1>
+    </header>
+    <main>
+        <form class="person-form">
+            <div class="form-group">
+                <label for="person-name">Person's Name:</label>
+                <input type="text" id="person-name" name="person-name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="relationship">Relationship:</label>
+                <input type="text" id="relationship" name="relationship" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </main>
     <script src="scripts.js"></script>
 </body>
 </html>
